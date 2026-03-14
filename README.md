@@ -16,8 +16,8 @@
 ## 🎯 Roadmap học tập toàn diện
 
 ### 🌱 **FOUNDATION (Nền tảng)**
-- ✅ **Lesson 1**: REST API cơ bản (ĐANG HỌC)
-- ⏳ **Lesson 2**: Validation & Error Handling
+- ✅ **Lesson 1**: REST API cơ bản (HOÀN THÀNH)
+- ✅ **Lesson 2**: Validation & Error Handling (HOÀN THÀNH)
 - ⏳ **Lesson 3**: Configuration & Profiles
 
 ### 💾 **DATABASE & PERSISTENCE**
@@ -27,7 +27,7 @@
 
 ### 🔐 **SECURITY & AUTHENTICATION**
 - ⏳ **Lesson 7**: JWT Authentication & Authorization
-- ⏳ **Lesson 8**: Token Blacklist & Refresh Token
+- ⏳ **Lesson 8**: Token Blacklist (Redis) & Refresh Token
 - ⏳ **Lesson 9**: Rate Limiting & API Security
 
 ### ⚡ **PERFORMANCE & CACHING**
@@ -38,7 +38,7 @@
 ### 📊 **OBSERVABILITY**
 - ⏳ **Lesson 13**: Logging (Logback, Structured Logging)
 - ⏳ **Lesson 14**: Tracing (Sleuth, Zipkin)
-- ⏳ **Lesson 15**: Monitoring (Micrometer, Prometheus)
+- ⏳ **Lesson 15**: Monitoring (Micrometer + Prometheus + Grafana)
 
 ### 🔄 **MESSAGING & COMMUNICATION**
 - ⏳ **Lesson 16**: Message Queue (RabbitMQ, Apache Kafka)
@@ -133,6 +133,20 @@ Xem roadmap đầy đủ từ cơ bản đến advanced:
 - 🌱 Foundation → 💾 Database → 🔐 Security → ⚡ Performance
 - 📊 Observability → 🔄 Messaging → 🛡️ Resilience → 🐳 DevOps
 - 🎯 **Mục tiêu:** Trở thành Spring Boot Expert trong 25 lessons!
+
+### 📖 [Lesson 2: Validation & Error Handling](docs/LESSON-2-GUIDE.md)
+Chi tiết về validation và xử lý lỗi:
+- 🏷️ Validation annotations: `@Valid`, `@NotBlank`, `@Email`, etc.
+- 🛡️ Global Exception Handler với `@RestControllerAdvice`
+- 📋 DTO pattern và Error Response chuẩn
+- 🧪 Test cases và best practices
+
+### 🚀 [Hướng dẫn Test với Postman](docs/POSTMAN-TESTING-GUIDE.md)
+Step-by-step test với Postman:
+- ✅ 9 test cases chi tiết với expected responses
+- 🎯 Test scenarios: success, validation errors, business logic errors
+- 💡 Postman tips: Environment, Tests, Pre-request Scripts
+- 🔍 Troubleshooting guide
 
 ## 📚 Kiến thức đã học (Lesson 1)
 
