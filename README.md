@@ -5,234 +5,249 @@
   
   [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
   [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-brightgreen.svg)](https://spring.io/projects/spring-boot)
+  [![MongoDB](https://img.shields.io/badge/MongoDB-7.0-green.svg)](https://www.mongodb.com/)
+  [![Security](https://img.shields.io/badge/Spring%20Security-JWT-red.svg)](https://spring.io/projects/spring-security)
   [![Maven](https://img.shields.io/badge/Maven-3.6+-blue.svg)](https://maven.apache.org/)
   [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 </div>
 
 ## 📖 Giới thiệu
 
-Đây là dự án học Spring Boot từ cơ bản đến nâng cao, được thiết kế theo từng lesson để bạn có thể học một cách có hệ thống.
+Đây là dự án học Spring Boot từ cơ bản đến nâng cao, được thiết kế theo từng lesson để bạn có thể học một cách có hệ thống. Hiện tại đã hoàn thành **7 lessons** với **Student Management System** sử dụng **MongoDB** và **JWT Authentication**.
 
-## 🎯 Roadmap học tập toàn diện
+## 🎯 Tình trạng hiện tại
 
-### 🌱 **FOUNDATION (Nền tảng)**
-- ✅ **Lesson 1**: REST API cơ bản (HOÀN THÀNH)
-- ✅ **Lesson 2**: Validation & Error Handling (HOÀN THÀNH)
-- ✅ **Lesson 3**: Configuration & Profiles (HOÀN THÀNH)
-- ✅ **Lesson 4**: SQL Database với JPA/Hibernate + MySQL (HOÀN THÀNH)
-- ⏳ **Lesson 3**: Configuration & Profiles
+### ✅ **ĐÃ HOÀN THÀNH:**
+- **Lesson 1**: REST API cơ bản ✅
+- **Lesson 2**: Validation & Error Handling ✅
+- **Lesson 3**: Configuration & Profiles ✅
+- **Lesson 4**: SQL Database với JPA/Hibernate + MySQL ✅
+- **Lesson 5**: NoSQL Database với MongoDB + Compass ✅
+- **Lesson 7**: Security & JWT Authentication ✅ (đang implement)
 
-### 💾 **DATABASE & PERSISTENCE**
-- ⏳ **Lesson 4**: SQL Database (JPA/Hibernate + MySQL/PostgreSQL)
-- ⏳ **Lesson 5**: NoSQL Database (MongoDB, Redis)
-- ⏳ **Lesson 6**: Database Migration (Flyway/Liquibase)
+### � **HIỆN TẠI ĐANG LÀM:**
+- **Lesson 7**: JWT Authentication system với Spring Security
+- User registration & login
+- Protected API endpoints
+- MongoDB user management
 
-### 🔐 **SECURITY & AUTHENTICATION**
-- ⏳ **Lesson 7**: JWT Authentication & Authorization
-- ⏳ **Lesson 8**: Token Blacklist (Redis) & Refresh Token
-- ⏳ **Lesson 9**: Rate Limiting & API Security
+---
 
-### ⚡ **PERFORMANCE & CACHING**
-- ⏳ **Lesson 10**: Redis Caching Strategies
-- ⏳ **Lesson 11**: Database Query Optimization
-- ⏳ **Lesson 12**: Async Processing
+## 🏗️ Kiến trúc hiện tại (Lesson 7)
 
-### 📊 **OBSERVABILITY**
-- ⏳ **Lesson 13**: Logging (Logback, Structured Logging)
-- ⏳ **Lesson 14**: Tracing (Sleuth, Zipkin)
-- ⏳ **Lesson 15**: Monitoring (Micrometer + Prometheus + Grafana)
+### **Technology Stack:**
+- **Backend:** Spring Boot 3.2.3 + Spring Security
+- **Database:** MongoDB 7.0 với MongoDB Compass
+- **Authentication:** JWT (JSON Web Token)
+- **Validation:** Bean Validation
+- **Build Tool:** Maven
 
-### 🔄 **MESSAGING & COMMUNICATION**
-- ⏳ **Lesson 16**: Message Queue (RabbitMQ, Apache Kafka)
-- ⏳ **Lesson 17**: WebSocket & Real-time Communication
-- ⏳ **Lesson 18**: REST Client & Service Communication
-
-### 🛡️ **RESILIENCE & RELIABILITY**
-- ⏳ **Lesson 19**: Circuit Breaker (Resilience4j)
-- ⏳ **Lesson 20**: Retry & Timeout Patterns
-- ⏳ **Lesson 21**: Health Checks & Graceful Shutdown
-
-### 🐳 **DEPLOYMENT & DEVOPS**
-- ⏳ **Lesson 22**: Docker & Containerization
-- ⏳ **Lesson 23**: CI/CD Pipeline (GitHub Actions/Jenkins)
-- ⏳ **Lesson 24**: Kubernetes Deployment
-- ⏳ **Lesson 25**: Production Best Practices
-
-## 🚀 Lesson 1: REST API Cơ bản
-
-### Những gì bạn sẽ học:
-- Tạo Spring Boot project
-- Hiểu cấu trúc thư mục
-- Tạo Controller đầu tiên
-- Các annotation cơ bản: `@RestController`, `@GetMapping`
-- Path Variable và Query Parameter
-
-### Cấu trúc dự án hiện tại:
+### **Project Structure:**
 ```
-spring-boot-demo/
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/demo/
-│   │   │   ├── SpringBootDemoApplication.java  # Main class
-│   │   │   └── controller/
-│   │   │       └── HelloController.java        # REST Controller
-│   │   └── resources/
-│   │       └── application.properties          # Cấu hình
-├── pom.xml                                     # Maven dependencies
-└── README.md                                   # File này
+src/main/java/com/example/demo/
+├── document/           # MongoDB Documents
+│   ├── Student.java    # Student entity
+│   └── User.java       # User entity (NEW)
+├── dto/               # Data Transfer Objects
+│   ├── StudentRequest.java
+│   ├── StudentResponse.java
+│   ├── RegisterRequest.java    # NEW
+│   ├── LoginRequest.java       # NEW
+│   └── AuthResponse.java       # NEW
+├── repository/        # MongoDB Repositories
+│   ├── StudentMongoRepository.java
+│   └── UserRepository.java     # NEW
+├── service/          # Business Logic
+│   ├── StudentService.java
+│   └── UserService.java        # NEW
+├── controller/       # REST Controllers
+│   ├── StudentController.java
+│   └── AuthController.java     # NEW
+├── security/         # Security Configuration (NEW)
+│   └── SecurityConfig.java
+└── SpringBootDemoApplication.java
 ```
 
-## 🏃‍♂️ Cách chạy dự án
+---
 
-### Yêu cầu:
+## 🔐 API Endpoints
+
+### **Authentication Endpoints (NEW):**
+- `POST /auth/register` - User registration
+- `POST /auth/login` - User login
+- `GET /auth/test` - Test auth endpoints
+
+### **Protected Student Endpoints:**
+- `GET /api/students` - Get all students (requires JWT)
+- `POST /api/students` - Create student (requires JWT)
+- `GET /api/students/{id}` - Get student by ID (requires JWT)
+- `PUT /api/students/{id}` - Update student (requires JWT)
+- `DELETE /api/students/{id}` - Delete student (requires JWT)
+- **+ 10 more search & statistics endpoints**
+
+---
+
+## 🚀 Cách chạy dự án
+
+### **Yêu cầu:**
 - Java 17+
 - Maven 3.6+
+- MongoDB Community Server
+- MongoDB Compass (optional, for GUI)
 
-### Các bước:
-
-1. **Clone hoặc tải project**
-2. **Chạy ứng dụng:**
-   ```bash
-   mvn spring-boot:run
-   ```
-3. **Mở trình duyệt và test các API:**
-
-   - **Hello đơn giản:** http://localhost:8080/hello
-   - **Hello với tên:** http://localhost:8080/hello/TenCuaBan
-   - **Greet với parameters:** http://localhost:8080/greet?name=Minh&age=25
-
-## 🧪 Test API
-
-Bạn có thể test bằng:
-
-### 1. Trình duyệt web:
-```
-http://localhost:8080/hello
-http://localhost:8080/hello/Minh
-http://localhost:8080/greet?name=Minh&age=25
-```
-
-### 2. Curl command:
+### **Bước 1: Setup MongoDB**
 ```bash
-curl http://localhost:8080/hello
-curl http://localhost:8080/hello/Minh
-curl "http://localhost:8080/greet?name=Minh&age=25"
+# Install MongoDB Community Server
+# Install MongoDB Compass
+# Start MongoDB service
+net start MongoDB
 ```
 
-### 3. Postman hoặc các REST client khác
+### **Bước 2: Chạy ứng dụng**
+```bash
+mvn spring-boot:run
+```
 
-## 📚 Tài liệu chi tiết
+### **Bước 3: Test Authentication**
+```bash
+# Test auth endpoint
+curl http://localhost:8080/auth/test
 
-### 📖 [Hướng dẫn Annotations & Cấu trúc](docs/ANNOTATIONS-GUIDE.md)
-Đọc file này để hiểu rõ:
-- 🏗️ Cấu trúc dự án Spring Boot
-- 🏷️ Giải thích chi tiết từng annotation
-- 🔄 Luồng hoạt động của ứng dụng
-- 💡 Tips và tricks cho người mới
+# Register new user
+curl -X POST http://localhost:8080/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "john_doe",
+    "email": "john@email.com",
+    "password": "SecurePass123!",
+    "confirmPassword": "SecurePass123!"
+  }'
 
-### 🗺️ [Roadmap chi tiết 25 Lessons](docs/ROADMAP-DETAILS.md)
-Xem roadmap đầy đủ từ cơ bản đến advanced:
-- 🌱 Foundation → 💾 Database → 🔐 Security → ⚡ Performance
-- 📊 Observability → 🔄 Messaging → 🛡️ Resilience → 🐳 DevOps
-- 🎯 **Mục tiêu:** Trở thành Spring Boot Expert trong 25 lessons!
+# Login user
+curl -X POST http://localhost:8080/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "john_doe",
+    "password": "SecurePass123!"
+  }'
+```
 
-### 📖 [Lesson 2: Validation & Error Handling](docs/LESSON-2-GUIDE.md)
-Chi tiết về validation và xử lý lỗi:
-- 🏷️ Validation annotations: `@Valid`, `@NotBlank`, `@Email`, etc.
-- 🛡️ Global Exception Handler với `@RestControllerAdvice`
-- 📋 DTO pattern và Error Response chuẩn
-- 🧪 Test cases và best practices
+---
 
-### 🚀 [Hướng dẫn Test với Postman](docs/POSTMAN-TESTING-GUIDE.md)
-Step-by-step test với Postman:
-- ✅ 9 test cases chi tiết với expected responses
-- 🎯 Test scenarios: success, validation errors, business logic errors
-- 💡 Postman tips: Environment, Tests, Pre-request Scripts
-- 🔍 Troubleshooting guide
+## 🧪 Testing với Postman
 
-### 📖 [Lesson 3: Configuration & Profiles](docs/LESSON-3-GUIDE.md)
-Chi tiết về configuration và profiles:
-- 🏷️ `@ConfigurationProperties`, `@Value`, `@Profile`
-- 🌍 Multi-environment setup: dev, staging, prod
-- 🔧 External configuration và environment variables
-- 🎯 Feature flags và conditional beans
-- 🧪 Test APIs với different profiles
+### **Postman Collection:**
+Xem chi tiết trong: [`docs/LESSON-7-POSTMAN-TESTING.md`](docs/LESSON-7-POSTMAN-TESTING.md)
 
-### 🚀 [Setup Profiles trong IntelliJ IDEA](docs/INTELLIJ-PROFILE-SETUP.md)
-Hướng dẫn setup profiles trong IntelliJ:
-- ⚙️ Tạo Run Configurations cho từng profile
-- 🎯 Quick switch giữa dev/staging/prod
-- 🔧 Environment variables và VM options
-- 💡 Tips và troubleshooting
+**Test Flow:**
+1. **Register User** → Get userId
+2. **Login User** → Get JWT token
+3. **Access Protected Endpoints** → Use JWT token
+4. **Test Security** → Verify unauthorized access blocked
 
-## 📚 Kiến thức đã học (Lesson 1)
+---
 
-### 1. **@RestController**
-- Kết hợp `@Controller` + `@ResponseBody`
-- Tự động convert return value thành JSON/XML
+## � Documentation
 
-### 2. **@GetMapping**
-- Xử lý HTTP GET requests
-- Có thể map với URL cụ thể
+### **📖 Lesson Guides:**
+- [`docs/LESSON-4-GUIDE.md`](docs/LESSON-4-GUIDE.md) - SQL Database với MySQL
+- [`docs/LESSON-5-GUIDE.md`](docs/LESSON-5-GUIDE.md) - NoSQL với MongoDB
+- [`docs/LESSON-7-GUIDE.md`](docs/LESSON-7-GUIDE.md) - Security & JWT Authentication
 
-### 3. **@PathVariable**
-- Lấy giá trị từ URL path
-- VD: `/hello/{name}` → `@PathVariable String name`
+### **🧪 API Testing:**
+- [`docs/LESSON-4-API-TESTING.md`](docs/LESSON-4-API-TESTING.md) - MySQL API testing
+- [`docs/LESSON-5-API-TESTING.md`](docs/LESSON-5-API-TESTING.md) - MongoDB API testing
+- [`docs/LESSON-7-POSTMAN-TESTING.md`](docs/LESSON-7-POSTMAN-TESTING.md) - JWT Authentication testing
 
-### 4. **@RequestParam**
-- Lấy giá trị từ query parameters
-- VD: `?name=Minh&age=25`
-- Có thể set default value
+### **� Setup Guides:**
+- [`docs/LESSON-5-MONGODB-SETUP.md`](docs/LESSON-5-MONGODB-SETUP.md) - MongoDB installation
 
-## 🔥 Thử thách
+---
 
-Hãy thử tự tạo thêm:
+## 🎯 Roadmap tiếp theo
 
-1. **API trả về thông tin cá nhân:**
-   ```java
-   @GetMapping("/profile/{id}")
-   public String getProfile(@PathVariable int id) {
-       // Code của bạn ở đây
-   }
-   ```
+### � **MESSAGING & COMMUNICATION**
+- **Lesson 8**: Message Queue (RabbitMQ, Apache Kafka)
+- **Lesson 9**: WebSocket & Real-time Communication
 
-2. **API tính toán đơn giản:**
-   ```java
-   @GetMapping("/calculate")
-   public String calculate(@RequestParam int a, @RequestParam int b) {
-       // Code của bạn ở đây
-   }
-   ```
+### ⚡ **PERFORMANCE & CACHING**
+- **Lesson 10**: Redis Caching Strategies
+- **Lesson 11**: Database Query Optimization
 
-## 🎉 Kết quả mong đợi
+### 📊 **OBSERVABILITY**
+- **Lesson 12**: Logging (Logback, Structured Logging)
+- **Lesson 13**: Monitoring (Micrometer + Prometheus + Grafana)
 
-Sau Lesson 1, bạn sẽ:
-- ✅ Hiểu cấu trúc Spring Boot project
-- ✅ Tạo được REST API đơn giản
-- ✅ Biết cách sử dụng Path Variable và Query Parameter
-- ✅ Chạy và test được ứng dụng
+### 🛡️ **RESILIENCE & RELIABILITY**
+- **Lesson 14**: Circuit Breaker (Resilience4j)
+- **Lesson 15**: Rate Limiting & API Security
+
+### 🐳 **DEPLOYMENT & DEVOPS**
+- **Lesson 16**: Docker & Containerization
+- **Lesson 17**: CI/CD Pipeline
+- **Lesson 18**: Production Best Practices
+
+---
+
+## 🔥 Features hiện tại
+
+### **✅ Student Management:**
+- CRUD operations với MongoDB
+- Search & filtering
+- Statistics & aggregation
+- DTO pattern implementation
+- Validation & error handling
+
+### **✅ Authentication & Security:**
+- User registration với password validation
+- BCrypt password encryption
+- JWT token-based authentication
+- Protected API endpoints
+- CORS configuration
+
+### **✅ Database:**
+- MongoDB document storage
+- Flexible schema
+- Auto-indexing
+- MongoDB Compass integration
+
+---
+
+## 🎉 Kết quả đạt được
+
+Sau 7 lessons, bạn đã có:
+- ✅ **Production-ready REST API** với authentication
+- ✅ **NoSQL database** integration
+- ✅ **Security system** với JWT
+- ✅ **Clean architecture** với DTO pattern
+- ✅ **Comprehensive testing** với Postman
+- ✅ **Professional documentation**
+
+---
 
 ## 📞 Liên hệ & Hỗ trợ
 
-Nếu gặp khó khăn, hãy:
+Nếu gặp khó khăn:
 - 📧 Tạo issue trên GitHub
 - 💬 Hỏi trong comment
-- 📖 Đọc lại documentation
+- 📖 Đọc documentation trong `docs/`
 
 ---
 
 <div align="center">
-  <b>🌟 Chúc bạn học tập vui vẻ và thành công! 🌟</b>
+  <b>🌟 Spring Boot Learning Journey - Lesson 7 🌟</b>
   
   <br><br>
   
-  **Next:** [Lesson 2 - Validation & Error Handling](docs/lesson-2.md) (Coming soon...)
+  **Current:** Security & JWT Authentication 🔐
   
-  ### 🗺️ **Roadmap Overview:**
+  **Next:** Message Queue & Real-time Communication 🔄
+  
+  ### 🗺️ **Progress:**
   ```
-  Foundation → Database → Security → Performance → 
+  Foundation ✅ → Database ✅ → Security 🔄 → Performance → 
   Observability → Messaging → Resilience → DevOps
   ```
   
-  **🎯 Mục tiêu cuối khóa:** Xây dựng được một microservice production-ready hoàn chỉnh!
+  **🎯 Mục tiêu:** Production-ready microservice với full authentication system!
 </div>
