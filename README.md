@@ -167,12 +167,12 @@ Xem chi tiết trong: [`docs/LESSON-7-POSTMAN-TESTING.md`](docs/LESSON-7-POSTMAN
 ## 🎯 Roadmap tiếp theo
 
 ### � **MESSAGING & COMMUNICATION**
-- **Lesson 8**: Message Queue (RabbitMQ, Apache Kafka)
-- **Lesson 9**: WebSocket & Real-time Communication
+- **Lesson 8**: Redis Caching Strategies
+- **Lesson 9**: Database Query Optimization
 
-### ⚡ **PERFORMANCE & CACHING**
-- **Lesson 10**: Redis Caching Strategies
-- **Lesson 11**: Database Query Optimization
+### 📨 **MESSAGING & COMMUNICATION**
+- **Lesson 10**: Message Queue (RabbitMQ, Apache Kafka)
+- **Lesson 11**: WebSocket & Real-time Communication
 
 ### 📊 **OBSERVABILITY**
 - **Lesson 12**: Logging (Logback, Structured Logging)
