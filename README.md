@@ -1,4 +1,4 @@
-# 🚀 Spring Boot Complete Course - Student Management System
+# 🚀 Spring Boot Complete Course 
 
 ## 📖 Giới thiệu
 
