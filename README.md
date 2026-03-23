@@ -1,4 +1,4 @@
-# 🚀 Spring Boot Complete Course - Student Management System
+# 🚀 Spring Boot Complete Course
 
 ## 📖 Giới thiệu
 
@@ -32,12 +32,77 @@ Khóa học Spring Boot từ cơ bản đến nâng cao thông qua việc xây d
 | **7** | 🔐 **Security & JWT** | ✅ **Completed** | Spring Security, JWT, Authentication |
 | **8** | ⚡ **Redis Caching** | ✅ **Completed** | Redis, Spring Cache, Performance |
 | **9** | 📨 **Message Queues** | ✅ **Completed** | RabbitMQ, Async Processing, Events |
+<<<<<<< HEAD
+| **10** | 🌐 **WebSocket** | ✅ **Completed** | Real-time Communication |
+=======
 | **10** | 🌐 **WebSocket** | ⏳ **Planned** | Real-time Communication |
+>>>>>>> 75829830bff49f35b272ab303336c39901dbce2f
 | **11** | 🧪 **Testing** | ⏳ **Planned** | Unit Tests, Integration Tests |
 | **12** | 📊 **Monitoring** | ⏳ **Planned** | Actuator, Metrics, Logging |
 | **13** | 🐳 **Docker** | ⏳ **Planned** | Containerization, Docker Compose |
 | **14** | ☁️ **Cloud Deployment** | ⏳ **Planned** | AWS, Azure, Production Setup |
 
+<<<<<<< HEAD
+
+## 🎓 Learning Outcomes
+
+Sau khi hoàn thành 10 lessons, bạn đã nắm vững:
+
+### **Spring Boot Fundamentals:**
+- Project setup và configuration
+- REST API development với Spring MVC
+- Dependency injection và IoC container
+- Auto-configuration và Spring Boot starters
+
+### **Database Integration:**
+- MongoDB với Spring Data MongoDB
+- Repository pattern và custom queries
+- Document-based NoSQL operations
+- Database indexing và performance
+
+### **Security Implementation:**
+- JWT authentication và authorization
+- Spring Security configuration
+- Password hashing với BCrypt
+- Stateless authentication patterns
+
+### **Performance Optimization:**
+- Redis caching strategies và patterns
+- Cache annotations (@Cacheable, @CacheEvict, @CachePut)
+- Performance monitoring và optimization
+- Cache invalidation và TTL management
+
+### **Asynchronous Processing:**
+- RabbitMQ message queues và AMQP protocol
+- Event-driven architecture patterns
+- Message publishing và consuming
+- Async processing và reliability patterns
+
+### **Real-time Communication:**
+- WebSocket integration với STOMP protocol
+- Real-time notifications và event broadcasting
+- Chat functionality và private messaging
+- Connection management và user tracking
+- Integration với existing message queue system
+
+### **Production Considerations:**
+- Docker containerization với Docker Compose
+- Configuration management với application.properties
+- Error handling và validation patterns
+- API documentation và testing strategies
+- System monitoring và health checks
+
+---
+
+## 🔮 Next Steps (Lessons 11-14)
+
+### **Lesson 11: Testing & Quality Assurance**
+- Unit testing với JUnit 5
+- Integration testing
+- Test containers
+- API testing automation
+
+=======
 ### **📊 Progress Summary:**
 - ✅ **Completed**: 9 lessons (Lessons 1-9)
 - ⏳ **Planned**: 5 lessons (Lessons 10-14)
@@ -369,6 +434,7 @@ Sau khi hoàn thành 9 lessons, bạn đã nắm vững:
 - Test containers
 - API testing automation
 
+>>>>>>> 75829830bff49f35b272ab303336c39901dbce2f
 ### **Lesson 12: Monitoring & Observability**
 - Spring Boot Actuator
 - Metrics và monitoring
@@ -390,9 +456,17 @@ Sau khi hoàn thành 9 lessons, bạn đã nắm vững:
 ---
 
 <div align="center">
+<<<<<<< HEAD
+  <b>🎓 Lesson 10: WebSocket Complete! 🎓</b>
+  
+  <br><br>
+  
+  **Real-time, Event-Driven Spring Boot Application!**
+=======
   <b>🎓 Lesson 9: Message Queues Complete! 🎓</b>
   
   <br><br>
   
   **Asynchronous, Event-Driven Spring Boot Application!**
+>>>>>>> 75829830bff49f35b272ab303336c39901dbce2f
 </div>
