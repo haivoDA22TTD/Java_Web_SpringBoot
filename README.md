@@ -2,7 +2,7 @@
 
 ## 📖 Giới thiệu
 
-Khóa học Spring Boot từ cơ bản đến nâng cao thông qua việc xây dựng một hệ thống quản lý sinh viên hoàn chỉnh. Mỗi lesson sẽ thêm một tính năng mới và học một công nghệ khác nhau.
+Khóa học Spring Boot từ cơ bản đến nâng cao. Mỗi lesson sẽ thêm một tính năng mới và học một công nghệ khác nhau.
 
 ---
 
