@@ -932,8 +932,5 @@ testInvalidMessages();
 
 <div align="center">
   <b>🎉 WebSocket Testing Complete! 🎉</b>
-  
-  <br><br>
-  
-  **All Real-time Features Verified!**
+
 </div>
