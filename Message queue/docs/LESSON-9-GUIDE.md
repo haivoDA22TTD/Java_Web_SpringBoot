@@ -611,20 +611,7 @@ Sau Lesson 9, bạn sẽ nắm vững:
 
 ---
 
-## 🔮 Next Steps
 
-### **Immediate (Lesson 9):**
-1. Setup RabbitMQ with Docker
-2. Configure Spring AMQP
-3. Implement message publishers
-4. Create message consumers
-5. Test with RabbitMQ Management UI
-
-### **Advanced (Future):**
-- Message routing patterns
-- Distributed transactions
-- Event sourcing implementation
-- Microservices communication
 
 ---
 
